@@ -1,0 +1,50 @@
+---
+title: "Lab 10"
+author: "Hollie Pennington"
+date: "11/29/2021"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE) 
+library(tidyverse)
+library(janitor)
+library(usethis)
+library(beepr)
+library(praise)
+library(cowsay)
+library(paletteer)
+library(sf)
+```
+
+## beepr:beep()
+Use 'beep()' to give yourself an audio alert. 
+
+## for loop + beep
+
+```{r}
+for (i in rev(seq(1:9999))) {
+  print(paste(i,"bottles of beer on the wall"))
+}
+
+beep(4)
+```
+
+# praise in nice
+
+```{r}
+praise("${EXCLAMATION}!!! This code works ${adverb_manner}!")
+
+praise("Holy ${creating}, Batman - this code works ${ADVERB_MANNER}!")
+```
+
+## cowsay:: say to have characters say something 
+
+```{r}
+say("You'll be okay!", by = "shark")
+```
+
+## usethis for everything 
+
+cowsay::say(praise::praise("You are ${ADJECTIVE}!"), by = "cat")
+
